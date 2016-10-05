@@ -45,3 +45,12 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# IntelliJ
+.idea/*
+target/*
+
+# Tests
+src/test/*
+.idea/vcs.xml
+.idea/vcs.xml
