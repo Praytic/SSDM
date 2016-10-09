@@ -6,9 +6,7 @@ import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
-/**
- * Created by Daniil on 05.10.2016.
- */
+
 public class StudentManager {
     public EntityManager em = Persistence.createEntityManagerFactory("Eremushkin").createEntityManager();
 

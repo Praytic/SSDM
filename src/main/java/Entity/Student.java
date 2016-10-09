@@ -1,5 +1,6 @@
 package Entity;
 
+
 import org.hibernate.annotations.ForeignKey;
 
 import javax.persistence.*;
