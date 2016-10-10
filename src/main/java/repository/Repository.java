@@ -1,14 +1,7 @@
-package Repositoriy;
-
-
-
-
+package repository;
 import java.util.List;
 
-/**
- * Created by Daniil on 06.10.2016.
- */
-public interface EntityRepository <T, K> {
+public interface Repository<T, K> {
     T add(T t);
     void delete(K key);
     T get(K key);

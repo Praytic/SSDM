@@ -6,7 +6,7 @@
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
-          <factory-entry name="Eremushkin" />
+          <factory-entry name="Eremushkin" value="63bc688f-3485-4b27-8153-d1cc32bdf631" />
           <factory-entry name="noname-persistence.xml@118" />
         </datasource-mapping>
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
