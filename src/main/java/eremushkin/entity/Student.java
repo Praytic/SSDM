@@ -1,4 +1,4 @@
-package Entity;
+package eremushkin.entity;
 
 
 import org.hibernate.annotations.ForeignKey;
@@ -10,14 +10,12 @@ import javax.persistence.*;
 @NamedQuery(name = "Student.getAll", query = "select s from Student s")
 public class Student {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO) // посмотреть иной тип генирации
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long studentId;
     @Column(name = "firstName", length = 32)
     private String firstName;
     @Column(name = "lastName", length = 32)
     private String lastName;
-    //private Integer groupId;
-
 
     public Student() {
     }

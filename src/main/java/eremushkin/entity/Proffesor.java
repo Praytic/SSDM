@@ -1,4 +1,4 @@
-package Entity;
+package eremushkin.entity;
 
 import javax.persistence.*;
 
@@ -16,6 +16,7 @@ public class Proffesor {
     private String firstName;
     @Column(name = "lastName", length = 32)
     private String lastName;
+
     //private Integer subjectId;
 
 }

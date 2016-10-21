@@ -1,4 +1,4 @@
-package Entity;
+package eremushkin.entity;
 
 import javax.persistence.*;
 
@@ -9,25 +9,25 @@ public class Subject {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long subjectId;
-    @Column(name = "name", length = 50)
-    private String name;
+    @Column(name = "subjectname", length = 50)
+    private String subjectName;
 
     public Subject() {
     }
 
-    public Subject(String name) {
-        this.name = name;
+    public Subject(String subjectName) {
+        this.subjectName = subjectName;
     }
 
     public long getSubjectId() {
         return subjectId;
     }
 
-    public String getName() {
-        return name;
+    public String getSubjectName() {
+        return subjectName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setSubjectName(String subjectName) {
+        this.subjectName = subjectName;
     }
 }
