@@ -54,3 +54,5 @@ target/*
 src/test/*
 .idea/vcs.xml
 .idea/vcs.xml
+
+*\eremushkin\StartClass.java

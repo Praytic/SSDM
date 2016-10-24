@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Scope;
 import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,20 +19,16 @@ import java.util.List;
 /**
  * Created by Daniil on 10.10.2016.
  */
-
+@Repository
 public class StudentRepository extends AbstractEntityRepository<Student> {
 
     @Transactional(propagation = Propagation.REQUIRED)
-    public Student get(Long key) {
+    public Student get(long key) {
         return (Student) sessionFactory.getCurrentSession().load(Student.class, key);
     }
 
+    @Transactional(propagation = Propagation.REQUIRED)
     public List<Student> query(String nameQuery) {
         return sessionFactory.getCurrentSession().getNamedQuery(nameQuery).list();
-        /*EntityManager em = entityManagerFactory.createEntityManager();
-        TypedQuery<Student> typedQuery = em.createNamedQuery(nameQuery, Student.class);
-        return typedQuery.getResultList();*/
-
-
     }
 }

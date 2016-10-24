@@ -15,8 +15,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-
-public abstract class AbstractEntityRepository<T> implements EntityRepository<T, Long> {
+@Repository
+public abstract class AbstractEntityRepository<T> implements EntityRepository<T> {
 
     protected SessionFactory sessionFactory;
 
@@ -28,7 +28,7 @@ public abstract class AbstractEntityRepository<T> implements EntityRepository<T,
     }
 
 
-    public abstract T get(Long key);
+    public abstract T get(long key);
     public abstract  List<T> query(String nameQuery);
 
     @Transactional(propagation = Propagation.REQUIRED)
@@ -37,7 +37,7 @@ public abstract class AbstractEntityRepository<T> implements EntityRepository<T,
     }
 
     @Transactional(propagation = Propagation.REQUIRED)
-    public void delete (Long key) {
+    public void delete (long key) {
         T entiy = get(key);
         if(entiy != null)
             sessionFactory.getCurrentSession().delete(entiy);
