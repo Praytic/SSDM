@@ -1,10 +1,6 @@
 package eremushkin.entity;
 
-
-import org.hibernate.annotations.ForeignKey;
-
 import javax.persistence.*;
-import java.util.List;
 import java.util.Set;
 
 @Entity
