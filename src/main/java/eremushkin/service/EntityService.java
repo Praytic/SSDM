@@ -1,6 +1,5 @@
 package eremushkin.service;
 
-import javax.persistence.Entity;
 import java.util.List;
 
 /**

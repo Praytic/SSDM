@@ -4,12 +4,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- com.eremushkin -->
+    <!-- также должен называться твой пекедж после java -->
     <groupId>Eremushkin</groupId>
+    <!-- ssdm -->
     <artifactId>erem</artifactId>
+    <!-- Т? -->
     <version>1.0T</version>
     <packaging>war</packaging>
 
     <properties>
+        <!-- А че не все проперти вынес? -->
         <spring.version>4.3.2.RELEASE</spring.version>
         <spring.security.version>4.1.3.RELEASE</spring.security.version>
     </properties>
@@ -49,6 +54,7 @@
         </dependency>
 
         <!-- Spring -->
+        <!-- Емае зачем тебе столько зависимостей спринговских? -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>

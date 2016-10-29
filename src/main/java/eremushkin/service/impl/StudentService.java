@@ -14,7 +14,9 @@ public class StudentService implements EntityService<Student> {
     @Autowired
     private StudentRepository repository;
 
+    // Почему addBank?
     public Student addBank(Student student) {
+        // Тебе не нужно saveAndFlush, достаточно save, так как ты не оборачиваешь метод в свою транзакцию
         Student savedStudent = repository.saveAndFlush(student);
         return savedStudent;
     }
@@ -27,6 +29,7 @@ public class StudentService implements EntityService<Student> {
         return repository.findOne(id);
     }
 
+    // Чем эдит отличается от addBank?
     public Student edit(Student student) {
         return repository.saveAndFlush(student);
     }

@@ -18,9 +18,11 @@
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
 
+    <!-- Тебе не нужно указывать annotation-config, если ты указал component-scan. -->
     <context:annotation-config />
     <context:component-scan base-package="eremushkin" />
-    
+
+    <!-- Думаю лучше назвать persistenceContext.xml -->
     <import resource="classpath:data.xml" />
 
 </beans>

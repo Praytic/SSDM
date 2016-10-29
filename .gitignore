@@ -53,6 +53,7 @@ target/*
 # Tests
 src/test/*
 .idea/vcs.xml
+# Дубликат
 .idea/vcs.xml
 
 *\eremushkin\StartClass.java

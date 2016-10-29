@@ -7,7 +7,10 @@ import java.util.List;
  * Created by Daniil on 05.10.2016.
  */
 @Entity
+// С маленькой буквы
+// А также в единственном числе
 @Table(name = "Teachers")
+// Тебе не нужна эта квери, у тебя в репозитории есть findAll()
 @NamedQuery(name = "Teacher.getAll", query = "select p from Teacher p")
 public class Teacher {
     @Id

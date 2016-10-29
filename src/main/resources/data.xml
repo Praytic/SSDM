@@ -18,7 +18,6 @@
     <jpa:repositories base-package="eremushkin.repository" entity-manager-factory-ref="entityManagerFactory"
                       transaction-manager-ref="transactionManager"/>
 
-
     <bean id="propertyConfigurer"
           class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
           p:location="classpath:jdbs.properties"/>
@@ -40,6 +39,7 @@
         </property>
         <property name="jpaProperties">
             <props>
+                <!-- А че эти проперти не вынес в properties? -->
                 <prop key="hibernate.show_sql">true</prop>
                 <prop key="hibernate.dialect">${jdbc.dialect}</prop>
                 <prop key="hibernate.connection.charSet">UTF-8</prop>
